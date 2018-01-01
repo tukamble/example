@@ -24,4 +24,12 @@ Class Items extends CI_Model{
         return $query->result();
         
     }
+    
+    public function getItembyname($name){
+        
+        
+        $query = $this->db->get_where('items',array('name'=>$name));
+        return $query->result();
+        
+    }
 }
