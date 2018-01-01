@@ -16,4 +16,12 @@ Class Items extends CI_Model{
         return $query->result();
         
     }
+    
+    public function getItembyid($id){
+        
+        
+        $query = $this->db->get_where('items',array('id'=>$id));
+        return $query->result();
+        
+    }
 }
